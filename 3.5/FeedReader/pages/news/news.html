@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="news.css"/>
+    <script src="news.js"></script>
+</head>
+<body>
+    <div class="feed-title-template"
+         data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="feed-item">
+            <div class="feed-item-title">
+                <h4 class="win-h4" data-win-bind="textContent: title"></h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="list-view"
+         class="win-selectionstylefilled"
+         data-win-control="WinJS.UI.ListView"
+         data-win-options="{
+            itemTemplate: select('.feed-title-template'),
+            selectionMode: 'none',
+            tapBehavior: 'invokeOnly',
+            layout: { type: WinJS.UI.ListLayout }
+         }"></div>
+</body>
+</html>
